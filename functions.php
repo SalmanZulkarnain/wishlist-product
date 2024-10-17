@@ -87,7 +87,9 @@ function updateProduct() {
         $status = $_POST['status'];
 
         // Ambil gambar lama dari database
-        $current_product = $db->querySingle("SELECT gambar_barang FROM wishlist WHERE id = :id", true);
+        $stmt = $db->prepare("SELECT gambar_barang FROM wishlist WHERE id = :id");
+        $stmt->bindParam(':id', $id, SQLITE3_INTEGER);
+        $current_product = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
         $gambar_barang = $current_product['gambar_barang'];
 
         // Cek apakah ada file gambar baru diupload
@@ -111,10 +113,7 @@ function updateProduct() {
                 $pesan = "File bukan gambar.";
                 return $pesan;
             }
-        } else {
-            // Jika tidak ada gambar baru, gunakan gambar lama
-            $gambar_barang = $current_product['gambar_barang'];
-        }
+        } // Jika tidak ada gambar baru, gunakan gambar lama
 
         // Update data produk
         $stmt = $db->prepare("UPDATE wishlist SET nama_barang = :nama_barang, url_barang = :url_barang, status = :status, gambar_barang = :gambar_barang WHERE id = :id");
