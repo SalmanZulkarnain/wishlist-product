@@ -131,9 +131,6 @@ function updateProduct() {
     return $pesan;
 }
 
-
-
-
 function deleteProduct() {
     global $db;
 

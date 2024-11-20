@@ -3,6 +3,14 @@ require 'config.php';
 require 'functions.php';
 
 $pesan = '';
+$product_edit = null;
+
+$products = viewProduct();
+deleteProduct();
+
+if (isset($_GET['edit'])) {
+    $product_edit = ambilProduct();
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['action'])) {
@@ -15,13 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 break;
         }
     }
-}
-
-$products = viewProduct();
-deleteProduct();
-$product_edit = null;
-if (isset($_GET['edit'])) {
-    $product_edit = ambilProduct();
 }
 ?>
 
@@ -37,7 +38,6 @@ if (isset($_GET['edit'])) {
 </head>
 
 <body>
-
     <div class="container">
         <div class="form-container">
             <form method="post" enctype="multipart/form-data">
@@ -90,7 +90,6 @@ if (isset($_GET['edit'])) {
             <?php } ?>
         </div>
     </div>
-
 </body>
 
 </html>
