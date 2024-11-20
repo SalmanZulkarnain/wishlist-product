@@ -1,72 +1,71 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Poppins;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
 
-  .container {
-    max-width: 1440px;
-    margin: auto;
-    padding: 30px;
-  }
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 30px;
+}
 
-  .form-container {
-    box-shadow: 0 0 10px grey;
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 20px;
-  }
+.form-container {
+  box-shadow: 0 0 10px grey;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+}
 
-  .input-group {
-    margin: 10px 0;
-  }
+.input-group {
+  margin: 10px 0;
+}
 
-  .input-group input {
-    width: 100%;
-    padding: 10px 5px;
-  }
+.input-group input {
+  width: 100%;
+  padding: 10px 5px;
+}
 
-  .input-group input[type="submit"] {
-    cursor: pointer;
-    font-weight: 500;
-  }
+.input-group input[type="submit"] {
+  cursor: pointer;
+  font-weight: 500;
+}
 
-  /* CARD */
-  .card-container {
-    max-width: 1440px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
+/* CARD */
+.card-container {
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-  .card {
-    box-shadow: 0 0 10px grey;
-    width: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
+.card {
+  box-shadow: 0 0 10px grey;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-  .card-content-footer {
-    margin-left: 20px;
-  }
+.card-content-footer {
+  margin-left: 20px;
+}
 
-  .card-content {
-    margin: 15px 0;
-  }
+.card-content {
+  margin: 15px 0;
+}
 
-  .card-footer {
-    margin: 15px 0;
+.card-footer {
+  margin: 15px 0;
+}
 
-  }
-
-  .card-footer a {
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: black;
-    border: 1px solid grey;
-  }
+.card-footer a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: black;
+  border: 1px solid grey;
+}

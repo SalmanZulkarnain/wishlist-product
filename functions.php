@@ -1,16 +1,15 @@
 <?php
-
 require 'config.php';
 
 function insertProduct() {
     global $db;
-    
+
     $pesan = '';
     if (isset($_POST['submit'])) {
         $nama_barang = $_POST['nama_barang'];
         $url_barang = $_POST['url_barang'];
         $status = $_POST['status'];
-
+        
         // Handle upload gambar
         $gambar_barang = '';
         if (isset($_FILES['gambar_barang']) && $_FILES['gambar_barang']['error'] == 0) {
@@ -47,8 +46,7 @@ function insertProduct() {
     return $pesan;
 }
 
-function viewProduct()
-{
+function viewProduct() {
     global $db;
 
     $result = $db->query("SELECT * FROM wishlist ORDER BY status = 'penting' DESC, id ASC");
@@ -60,8 +58,7 @@ function viewProduct()
     return $data;
 }
 
-function ambilProduct()
-{
+function ambilProduct() {
     global $db;
 
     if (!isset($_GET['edit'])) {
@@ -80,6 +77,7 @@ function updateProduct() {
     global $db;
 
     $pesan = '';
+
     if (isset($_POST['submit'])) {
         $id = $_POST['id'];
         $nama_barang = $_POST['nama_barang'];
@@ -136,8 +134,7 @@ function updateProduct() {
 
 
 
-function deleteProduct()
-{
+function deleteProduct() {
     global $db;
 
     if (isset($_GET['delete'])) {
